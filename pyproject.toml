@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mellanrum-voice-scout"
+version = "0.1.0"
+description = "Modular Voice Scout sensor using Silero VAD and Whisper"
+authors = [{name = "Mellanrum Team"}]
+dependencies = [
+    "sounddevice>=0.4.6",
+    "numpy>=1.21.0",
+    "onnxruntime>=1.16.0",
+    "torch>=2.0.0",
+    "requests>=2.31.0",
+    "whisper>=1.0.0",
+]
+
+[project.scripts]
+voice-scout = "voice_scout.main:main"
